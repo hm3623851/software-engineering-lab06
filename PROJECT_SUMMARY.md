@@ -126,9 +126,6 @@ Smart-Building-Energy-Management/
 # Unix/Linux/macOS
 ./compile_and_run.sh
 
-# Windows
-compile_and_run.bat
-
 # اجرای تست‌ها
 ./run_tests.sh
 ```
