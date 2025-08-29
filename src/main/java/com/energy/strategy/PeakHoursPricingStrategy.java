@@ -1,12 +1,12 @@
 package com.energy.strategy;
 
+import com.energy.constants.EnergyConstants;
+
 public class PeakHoursPricingStrategy implements PricingStrategy {
-    
-    private static final double PRICE_PER_UNIT = 1000.0;
     
     @Override
     public double calculateCost(int energyUnits) {
-        return energyUnits * PRICE_PER_UNIT;
+        return energyUnits * EnergyConstants.PEAK_HOURS_PRICE_PER_UNIT;
     }
     
     @Override
@@ -16,6 +16,11 @@ public class PeakHoursPricingStrategy implements PricingStrategy {
     
     @Override
     public double getPricePerUnit() {
-        return PRICE_PER_UNIT;
+        return EnergyConstants.PEAK_HOURS_PRICE_PER_UNIT;
+    }
+    
+    @Override
+    public String getPricingCategory() {
+        return EnergyConstants.PEAK_CATEGORY;
     }
 }

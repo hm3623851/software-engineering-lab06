@@ -1,16 +1,16 @@
 package com.energy.state;
 
+import com.energy.constants.EnergyConstants;
 import java.util.Collections;
 import java.util.Set;
 
 public class ShutdownState implements EnergySystemState {
     
-    private static final int ENERGY_CONSUMPTION_RATE = 0;
     private static final Set<String> ACTIVE_SYSTEMS = Collections.emptySet();
     
     @Override
     public int getEnergyConsumptionRate() {
-        return ENERGY_CONSUMPTION_RATE;
+        return EnergyConstants.SHUTDOWN_STATE_CONSUMPTION_RATE;
     }
     
     @Override

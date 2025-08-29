@@ -1,12 +1,12 @@
 package com.energy.strategy;
 
+import com.energy.constants.EnergyConstants;
+
 public class GreenModePricingStrategy implements PricingStrategy {
-    
-    private static final double PRICE_PER_UNIT = 300.0;
     
     @Override
     public double calculateCost(int energyUnits) {
-        return energyUnits * PRICE_PER_UNIT;
+        return energyUnits * EnergyConstants.GREEN_MODE_PRICE_PER_UNIT;
     }
     
     @Override
@@ -16,6 +16,11 @@ public class GreenModePricingStrategy implements PricingStrategy {
     
     @Override
     public double getPricePerUnit() {
-        return PRICE_PER_UNIT;
+        return EnergyConstants.GREEN_MODE_PRICE_PER_UNIT;
+    }
+    
+    @Override
+    public String getPricingCategory() {
+        return EnergyConstants.GREEN_CATEGORY;
     }
 }

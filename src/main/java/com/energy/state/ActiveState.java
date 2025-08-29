@@ -1,19 +1,23 @@
 package com.energy.state;
 
+import com.energy.constants.EnergyConstants;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 public class ActiveState implements EnergySystemState {
     
-    private static final int ENERGY_CONSUMPTION_RATE = 10;
     private static final Set<String> ACTIVE_SYSTEMS = new HashSet<>(Arrays.asList(
-        "Heating", "Ventilation", "Lighting", "Emergency Lighting", "Low-Consumption Ventilation"
+        EnergyConstants.HEATING_SYSTEM, 
+        EnergyConstants.VENTILATION_SYSTEM, 
+        EnergyConstants.LIGHTING_SYSTEM, 
+        EnergyConstants.EMERGENCY_LIGHTING_SYSTEM, 
+        EnergyConstants.LOW_CONSUMPTION_VENTILATION_SYSTEM
     ));
     
     @Override
     public int getEnergyConsumptionRate() {
-        return ENERGY_CONSUMPTION_RATE;
+        return EnergyConstants.ACTIVE_STATE_CONSUMPTION_RATE;
     }
     
     @Override

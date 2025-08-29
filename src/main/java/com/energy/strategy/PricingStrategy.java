@@ -7,4 +7,6 @@ public interface PricingStrategy {
     String getStrategyName();
     
     double getPricePerUnit();
+    
+    String getPricingCategory();
 }

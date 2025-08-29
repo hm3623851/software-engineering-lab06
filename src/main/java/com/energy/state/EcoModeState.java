@@ -1,19 +1,20 @@
 package com.energy.state;
 
+import com.energy.constants.EnergyConstants;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 public class EcoModeState implements EnergySystemState {
     
-    private static final int ENERGY_CONSUMPTION_RATE = 4;
     private static final Set<String> ACTIVE_SYSTEMS = new HashSet<>(Arrays.asList(
-        "Emergency Lighting", "Low-Consumption Ventilation"
+        EnergyConstants.EMERGENCY_LIGHTING_SYSTEM, 
+        EnergyConstants.LOW_CONSUMPTION_VENTILATION_SYSTEM
     ));
     
     @Override
     public int getEnergyConsumptionRate() {
-        return ENERGY_CONSUMPTION_RATE;
+        return EnergyConstants.ECO_MODE_CONSUMPTION_RATE;
     }
     
     @Override
